@@ -6,24 +6,15 @@ namespace exerc1
     {
         static void Main(string[] args)
         {
-            string nome, primeiroNome, sobrenome;
-            int count;
-            
-            Console.Write("Digite seu nome: ");
-            nome = Console.ReadLine();
-            nome = nome.Trim().ToLower();
 
-            string[] nomeSeparado = nome.Split(' ');
-            primeiroNome = nomeSeparado[0];
-            sobrenome = nomeSeparado[nomeSeparado.Length - 1];
+            double raio;
 
-            Console.WriteLine("Nome: " + primeiroNome);
-            Console.WriteLine("Sobrenome: " + sobrenome);
-            Console.WriteLine("Substituição: " + nome.Replace("a", "o"));
+            Console.Write("Digite o raio: ");
+            raio = double.Parse(Console.ReadLine());
 
-
-
-
+            Console.WriteLine("Área: " + (Math.PI * Math.Pow(raio, 2)));
+            Console.WriteLine("Perimetro: " + (2 * Math.PI * raio));
+            Console.WriteLine("Diametro: " + (raio * 2));
         }
     }
 }

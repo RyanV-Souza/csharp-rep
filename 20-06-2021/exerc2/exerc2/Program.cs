@@ -6,14 +6,25 @@ namespace exerc2
     {
         static void Main(string[] args)
         {
-            string nomeCompleto;
+            double a, b, c, delta;
 
-            Console.Write("Digite seu nome: ");
-            nomeCompleto = Console.ReadLine();
+            Console.WriteLine("Digite o valor de A: ");
+            a = double.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o valor de B: ");
+            b = double.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o valor de C: ");
+            c = double.Parse(Console.ReadLine());
 
-            string[] nomeSeparado = nomeCompleto.Trim().Split(' ');
+            delta = (b * b) - (4 * a * c);
+            
+            if(delta >= 0){
+                Console.WriteLine("X1: " + (((-b) + Math.Sqrt(delta)) / 2 * a));
+                Console.WriteLine("X2: " + (((-b) - Math.Sqrt(delta)) / 2 * a));
+            }
+            else{
+                Console.WriteLine("Menor que 0");
+            }
 
-            Console.WriteLine("Seu nome e-mail é " + nomeSeparado[0].ToLower() + "@fatec.sp.gov.br");
         }
     }
 }
